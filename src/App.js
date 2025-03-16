@@ -12,11 +12,11 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/AdminLandingPage" element={<AdminLandingPage />} />
-        <Route path="/ParticipantLandingPage" element={<ParticipantLandingPage />} />
-        <Route path="/AddEvent" element={<AddEvent />} />
-        <Route path="/event/:eventId" element={<EventDetailsPage />} />
+        <Route path="#/SignUp" element={<SignUp />} />
+        <Route path="#/AdminLandingPage" element={<AdminLandingPage />} />
+        <Route path="#/ParticipantLandingPage" element={<ParticipantLandingPage />} />
+        <Route path="#/AddEvent" element={<AddEvent />} />
+        <Route path="#/event/:eventId" element={<EventDetailsPage />} />
       </Routes>
     </Router>
   );

@@ -8,8 +8,8 @@ const EventDetailsPage = () => {
   const { eventId } = useParams();
   const [isRSVPOpen, setIsRSVPOpen] = useState(false);
 
-  // Find the event from the imported data
-  const event = events.find((e) => e.id === eventId);
+  // Convert eventId to a number (if stored as a number in Datas.js)
+  const event = events.find((e) => e.id === parseInt(eventId, 10));
 
   if (!event) {
     return <p>Event not found</p>;
@@ -17,6 +17,7 @@ const EventDetailsPage = () => {
 
   return (
     <div className="event-details-page">
+      {/* Event Header */}
       <header className="event-header">
         <img src={event.image} alt={event.title} className="event-banner" />
         <h1>{event.title}</h1>
@@ -24,37 +25,59 @@ const EventDetailsPage = () => {
         <p className="event-location">{event.location}</p>
       </header>
 
+      {/* Event Details */}
       <section className="event-details">
         <h2>Event Details</h2>
-        <p>{event.description}</p>
+        <p>{event.description || "No description available."}</p>
 
-        <h3>Schedule</h3>
-        <ul>
-          {event.schedule.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
+        {/* Event Schedule */}
+        {event.schedule && event.schedule.length > 0 ? (
+          <>
+            <h3>Schedule</h3>
+            <ul>
+              {event.schedule.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </>
+        ) : (
+          <p>No schedule available.</p>
+        )}
 
-        <h3>Participation Details</h3>
-        <p>{event.participationDetails}</p>
+        {/* Participation Details */}
+        {event.participationDetails && (
+          <>
+            <h3>Participation Details</h3>
+            <p>{event.participationDetails}</p>
+          </>
+        )}
 
-        <h3>Attendees</h3>
-        <div className="attendees-list">
-          {event.attendees.map((attendee, index) => (
-            <div key={index} className="attendee">
-              <img src={attendee.photo} alt={attendee.name} />
-              <p>{attendee.name}</p>
+        {/* Attendees List */}
+        {event.attendees && event.attendees.length > 0 ? (
+          <>
+            <h3>Attendees</h3>
+            <div className="attendees-list">
+              {event.attendees.map((attendee, index) => (
+                <div key={index} className="attendee">
+                  <img src={attendee.photo} alt={attendee.name} />
+                  <p>{attendee.name}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </>
+        ) : (
+          <p>No attendees listed yet.</p>
+        )}
       </section>
 
+      {/* Footer & RSVP Button */}
       <footer className="event-footer">
         <button className="rsvp-button" onClick={() => setIsRSVPOpen(true)}>
           RSVP
         </button>
       </footer>
 
+      {/* RSVP Form (Conditional Rendering) */}
       {isRSVPOpen && <RSVPForm event={event} closeForm={() => setIsRSVPOpen(false)} />}
     </div>
   );

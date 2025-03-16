@@ -13,7 +13,7 @@ function LandingPage() {
               <li><a href="#about">About</a></li>
               <li><a href="#features">Features</a></li>
               <li><a href="#contact">Contact</a></li>
-              <li><a href="/signup" className="cta">Sign Up</a></li>
+              <li><a href="#/SignUp" className="cta">Sign Up</a></li>
             </ul>
           </nav>
         </div>
@@ -21,17 +21,15 @@ function LandingPage() {
 
       {/* Hero Section */}
       <section className="hero">
-  <img src="/assets/bg.jpg" alt="Event Management" className="hero-image" />
-  <div className="container">
-    <h2 className="hero-title">Manage Events Effortlessly</h2>
-    <p className="hero-text">
-      Streamline your event management with our easy-to-use platform. Perfect for colleges, corporate events, and more!
-    </p>
-    <a href="/signup" className="btn-primary">Get Started</a>
-  </div>
-</section>
-
-
+        <img src="/assets/bg.jpg" alt="Event Management" className="hero-image" />
+        <div className="container">
+          <h2 className="hero-title">Manage Events Effortlessly</h2>
+          <p className="hero-text">
+            Streamline your event management with our easy-to-use platform. Perfect for colleges, corporate events, and more!
+          </p>
+          <a href="#/SignUp" className="btn-primary">Get Started</a>
+        </div>
+      </section>
 
       {/* About Section */}
       <section className="about" id="about">

@@ -10,6 +10,10 @@ const AddEvent = () => {
     location: '',
   });
 
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState('');
+
+  // Handle input change
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -17,21 +21,37 @@ const AddEvent = () => {
     });
   };
 
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Simple form validation
+    if (!formData.title || !formData.description || !formData.date || !formData.location) {
+      setMessage('All fields are required!');
+      return;
+    }
+
+    setLoading(true);
+    setMessage('');
+
     try {
       await axios.post('http://localhost:5000/events', formData);
-      alert('Event added successfully!');
+      setMessage('✅ Event added successfully!');
       setFormData({ title: '', description: '', date: '', location: '' });
     } catch (err) {
       console.error(err);
-      alert('Failed to add event!');
+      setMessage('❌ Failed to add event. Try again.');
     }
+
+    setLoading(false);
   };
 
   return (
     <div className="add-event-container">
       <h2>Add New Event</h2>
+
+      {message && <p className="event-message">{message}</p>}
+
       <form className="event-form" onSubmit={handleSubmit}>
         <label>Title</label>
         <input
@@ -41,6 +61,7 @@ const AddEvent = () => {
           onChange={handleChange}
           required
         />
+
         <label>Description</label>
         <textarea
           name="description"
@@ -48,6 +69,7 @@ const AddEvent = () => {
           onChange={handleChange}
           required
         ></textarea>
+
         <label>Date</label>
         <input
           type="date"
@@ -56,6 +78,7 @@ const AddEvent = () => {
           onChange={handleChange}
           required
         />
+
         <label>Location</label>
         <input
           type="text"
@@ -64,7 +87,10 @@ const AddEvent = () => {
           onChange={handleChange}
           required
         />
-        <button type="submit">Add Event</button>
+
+        <button type="submit" disabled={loading}>
+          {loading ? 'Adding...' : 'Add Event'}
+        </button>
       </form>
     </div>
   );
