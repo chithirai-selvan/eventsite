@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/event-management/static/css/main.dc6b071d.css",
-    "main.js": "/event-management/static/js/main.d1947e1a.js",
-    "static/js/453.f0705dd3.chunk.js": "/event-management/static/js/453.f0705dd3.chunk.js",
-    "index.html": "/event-management/index.html",
-    "main.dc6b071d.css.map": "/event-management/static/css/main.dc6b071d.css.map",
-    "main.d1947e1a.js.map": "/event-management/static/js/main.d1947e1a.js.map",
-    "453.f0705dd3.chunk.js.map": "/event-management/static/js/453.f0705dd3.chunk.js.map"
+    "main.css": "/eventsite/static/css/main.dc6b071d.css",
+    "main.js": "/eventsite/static/js/main.f94d07fd.js",
+    "static/js/453.f0705dd3.chunk.js": "/eventsite/static/js/453.f0705dd3.chunk.js",
+    "index.html": "/eventsite/index.html",
+    "main.dc6b071d.css.map": "/eventsite/static/css/main.dc6b071d.css.map",
+    "main.f94d07fd.js.map": "/eventsite/static/js/main.f94d07fd.js.map",
+    "453.f0705dd3.chunk.js.map": "/eventsite/static/js/453.f0705dd3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dc6b071d.css",
-    "static/js/main.d1947e1a.js"
+    "static/js/main.f94d07fd.js"
   ]
 }
