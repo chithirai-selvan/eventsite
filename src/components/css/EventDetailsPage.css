@@ -1,0 +1,133 @@
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Event details page container */
+.event-details-page {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ddd;
+}
+
+/* Event header */
+.event-header {
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.event-banner {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.event-header h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.event-location, .event-header p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+/* Event details section */
+.event-details {
+  text-align: left;
+  color: black;
+}
+
+.event-details h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.event-details p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.event-details h3 {
+  font-size: 24px;
+  margin-top: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.event-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.event-details li {
+  font-size: 18px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Attendees section */
+.attendees-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.attendee {
+  display: flex;
+  align-items: center;
+  background: #eee;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.attendee img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.attendee p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* RSVP Button */
+.event-footer {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.rsvp-button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.rsvp-button:hover {
+  background: #0056b3;
+}

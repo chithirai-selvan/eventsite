@@ -1,0 +1,83 @@
+/* RSVPForm.css */
+
+.rsvp-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(160, 148, 148, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.rsvp-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rsvp-form h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.rsvp-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.rsvp-form input,
+.rsvp-form select {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.rsvp-form input[type="text"],
+.rsvp-form input[type="email"] {
+  height: 40px;
+}
+
+.rsvp-form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.rsvp-form button:hover {
+  background-color: #0056b3;
+}
+
+.rsvp-form button:focus {
+  outline: none;
+}
+
+.rsvp-form button:last-of-type {
+  background-color: #ccc;
+  margin-top: 10px;
+}
+
+.rsvp-form button:last-of-type:hover {
+  background-color: #999;
+}
+
+.rsvp-form  input {
+  background-color: whitesmoke;
+  color: #333;
+}

@@ -1,0 +1,297 @@
+/* Import Montserrat Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Global Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0a0a0a; /* Dark background */
+  margin: 0;
+  padding: 0;
+  color: #f8f8f8; /* Light text */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background: rgba(10, 10, 10, 0.9);
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.2);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffcc00;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url('https://source.unsplash.com/1600x900/?event,concert') no-repeat center center/cover;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffcc00;
+  text-transform: uppercase;
+}
+
+.hero-text {
+  font-size: 1.4rem;
+  margin: 20px 0;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #ffcc00;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Sections */
+section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.about, .features {
+  background-color: #111;
+  border-radius: 12px;
+  box-shadow: 0px 10px 20px rgba(255, 204, 0, 0.1);
+  padding: 50px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #ffcc00;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #ddd;
+  line-height: 1.8;
+}
+
+/* Features Grid */
+.features-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background: #181818;
+  padding: 25px;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  box-shadow: 0px 8px 12px rgba(255, 204, 0, 0.15);
+  width: 300px;
+  text-align: center;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 12px 18px rgba(255, 204, 0, 0.3);
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Footer */
+.footer {
+  background: #000;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #888;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-links li {
+  display: inline;
+}
+
+.social-links a {
+  color: #ffcc00;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    display: none;
+    position: absolute;
+    background: #000;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    text-align: center;
+    border-radius: 12px;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .features-grid {
+    flex-direction: column;
+  }
+}
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 800px; /* Adjust height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  object-fit: cover; /* Ensures the image covers the section */
+  z-index: -1;
+}
+
+.hero .container {
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for text visibility */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.btn-primary {
+  background-color: #ff7f50;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-text {
+    font-size: 1.2rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}

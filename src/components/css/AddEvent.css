@@ -1,0 +1,79 @@
+.add-event-container {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.add-event-container h2 {
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Ensures consistent spacing between inputs */
+}
+
+.event-form label {
+  font-size: 0.9rem;
+  color: #333333;
+  font-weight: 500;
+}
+
+.event-form input,
+.event-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: #4a4a4a;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.event-form input:focus,
+.event-form textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 3px rgba(37, 99, 235, 0.5);
+}
+
+.event-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.event-form button {
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center; /* Centers the button */
+  width: 100%; /* Full width for consistency */
+}
+
+.event-form button:hover {
+  background-color: #1e40af;
+}
+
+@media screen and (max-width: 768px) {
+  .add-event-container {
+    padding: 15px;
+  }
+
+  .add-event-container h2 {
+    font-size: 1.5rem;
+  }
+}

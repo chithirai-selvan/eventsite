@@ -1,0 +1,137 @@
+/* General styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+.admin-container {
+  display: flex;
+  height: 100vh;
+  background-color: #121212;
+  color: #E0E0E0;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  width: 250px;
+  background-color: #1E1E1E;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.sidebar-nav a {
+  text-decoration: none;
+  color: #B0B0B0;
+  padding: 10px;
+  display: block;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.sidebar-nav a:hover {
+  color: #ffffff;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+/* Main Content */
+.admin-main {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Create Event Section */
+.create-event {
+  background-color: #1E1E1E;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.create-event h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.event-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-form input, .event-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background-color: #262626;
+  color: white;
+}
+
+.event-form button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #2196F3;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.event-form button:hover {
+  background-color: #1769aa;
+}
+
+/* Manage Events Section */
+.events-section {
+  background-color: #1E1E1E;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.events-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.events-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.event-card {
+  background-color: #262626;
+  padding: 15px;
+  border-radius: 8px;
+  width: calc(33% - 10px);
+  min-width: 250px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.event-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.event-card p {
+  font-size: 1rem;
+  color: #B0B0B0;
+}
